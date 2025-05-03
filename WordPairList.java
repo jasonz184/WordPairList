@@ -25,11 +25,17 @@ public class WordPairList
     {
         return allPairs;
     }
+
     /**
      * Returns the number of matches as described in part (b).
      */
     public int numMatches() 
     {
-    
+        int match = 0;
+        for(WordPair w : allPairs)
+        {
+            if(w.getFirst().equals(w.getSecond())) match++;
+        }
+        return match;
     }
 }
